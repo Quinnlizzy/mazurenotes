@@ -1,0 +1,15 @@
+How machine learning works
+
+
+data. 
+we generate massive amounts of information as data
+Data scientists use data to train machine learning models
+that can make predictions etc based on the relationships they find 
+in the data presented.
+
+in mazure:
+azure machine learning studio = authoring experiences:
+
+- automated machine learnin - non experts can create an effective machine learing model from data
+- azure machine learning designer - graphical interface for no-code dev of ML solutiomns
+- data metric visualisdation - analyze your experiemnts visually- Notebooks - write and run code in jupyter servers - intergrated in the studio
