@@ -22,3 +22,7 @@ optical character recognition
 reading of text within an image (like a street sign etc) or to extract info from a documents
 
 
+Azure AI vision:
+Image analysis
+face
+OCR
