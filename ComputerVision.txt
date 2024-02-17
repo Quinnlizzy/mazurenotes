@@ -1,0 +1,24 @@
+visual processing like seeing AI
+based on machine learning
+
+common tasks involved:
+
+image calssification:
+image classification involves training a ML model to clasify images based on the content
+
+object detection:
+ml models traind to identiy certain objects within a model - within a bounding box
+
+Semantic segmentation
+advanced ML where individual pixels are classified in accordance to the object to which they belong
+
+image analysis
+advanced ml models couldextyract information from images in otder to catalog and even describe the image
+
+face detection/recog
+specialised form of object detection that recog human facial gemoetry - can recognise indivs (phone unlock/bank app security)
+
+optical character recognition
+reading of text within an image (like a street sign etc) or to extract info from a documents
+
+
