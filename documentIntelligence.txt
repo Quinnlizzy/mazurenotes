@@ -1,0 +1,13 @@
+Document Intelligence deals with managing, processing, and using high volumes 
+of data found in forms and documents. 
+enables you to create software that can automate processing for contracts, health documents, financial forms
+
+Azure AI Document Intelligence to build solutions that manage and accelerate data collection from scanned documents.
+Features help automate document processing in apps and workflows, enhance data-driven strategies
+enrich document search capabilities. 
+
+prebuilt models can be used to add intelligent document processing for 
+invoices, receipts, health insurance cards, tax forms, and more. 
+
+create custom models with your own labeled datasets.
+Document Intelligence Studio
