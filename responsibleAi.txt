@@ -1,0 +1,28 @@
+Azure Ai: 
+six principles, designed to ensure that AI applications provide amazing solutions 
+to difficult problems without any unintended negative consequences.
+
+1. Faireness
+AI systems should treat all people fairly. 
+e.g. create learning model to support a loan approval application for a bank. 
+model should predict whether the loan should be approved or denied WITHOUT bias...
+Azure Machine Learning includes the capability to interpret models and quantify the extent 
+to which each feature of the data influences the model's prediction; helping identify and mitigate bias in the model.
+
+
+2. Reliability and safety
+AI systems should perform reliably and safely. 
+e.g. an AI-based system for an autonomous vehicle; unreliability = substantial risk to life.
+AI-based app development MUST be subjected to rigorous testing and deployment management processes before and after release.
+
+
+3.Privacy and security
+AI should be secure and respect privacy.
+machine learning models rely on large volumes of data & may contain personal details to be kept private.
+Even after the models are trained & in production, privacy and security must be considered.
+As system uses new data & makes predictions/action, the data and decisions made may be subject to priv/sect concerns.
+
+
+Inclusiveness
+AI should empower & engage everyone
+Should bring benefits to all parts of society, regardless of gender/sexual orientation/ethnicity etc
