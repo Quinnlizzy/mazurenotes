@@ -1,0 +1,11 @@
+Generative AI
+a category of capabilities within AI that create original content. 
+People typically interact with generative AI that has been built into chat apps. 
+Take in natural language input, and return appropriate responses in natural language, image, code, and audio.
+
+Azure OpenAI service
+used build generative AI solutions. cloud solution for deploying, customizing, and hosting generative AI models.
+It brings together the best of OpenAI's cutting edge models and APIs 
+with the security and scalability of Azure.
+Supports many foundation model choices that can serve different needs.
+You can use the Azure OpenAI Studio user interface to manage, develop, and customize generative AI models.
