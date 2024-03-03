@@ -1,0 +1,11 @@
+must be used responsibly.
+
+
+
+Challenge or Risk	        Example
+Bias can affect results	    A loan-approval model discriminates due to bias in the data with which it was trained
+Errors may cause harm	    An autonomous vehicle system failure
+Data exposure        	    A medical bot trained using patient data is risk if stored insecurely
+Solutions not universal 	A home automation assistant w/no audio output for visually impaired users
+Users trust              	An AI financial tool w/invest recommendations - what based on?
+Liability               	Innocent person is convicted based on evidence from facial recognition – who's responsible?
