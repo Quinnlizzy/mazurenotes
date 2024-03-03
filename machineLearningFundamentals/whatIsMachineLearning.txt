@@ -1,0 +1,9 @@
+What is machine learning?
+
+Fundamental idea = use data from past observations to predict unknown outcomes/values. 
+
+E.g.:
+
+- Ice cream store might use app that combines past sales and weather records to predict sales based on that days forecast
+- Doctor use data from past patients to run tests that predict if patient is at risk from diabetes based on various measurements.
+- Researcher use past obs to automate the ID of penguin species based on measurements of flippers/bill etc
