@@ -15,6 +15,7 @@ Machine learning as a function
  - After function is defined, you can use it to predict new values via inferencing.
 
 
+1) 
 Training data consists of:
  - past obs that include attributes/features of the thing being observed.
  - the known value of the thing you want to train a model to predict (the label).
@@ -36,3 +37,22 @@ consider prev examples:
  - Research scenario; goal = predict the penguin species based on physical attributes. 
                       Penguin measurements (flipper length, bill width) are features (x), 
                       Species (0 for Adelie, 1 for Gentoo etc) is label (y).
+
+
+
+2)
+An algorithm is applied to the data to determine a relationship between features & label
+and generalize that relationship as a calculation that can be performed on 'x' to calculate 'y'.
+Algorithm depends on kind of predictive problem trying to solve
+Basic principle is try to fit data to a function where values of the features(x) can calculate label(y).
+
+
+3)
+Result of algorithm = model that encapsulates the calculation derived by algorithm as a function - (f). 
+In efect: y = f(x)
+
+4)
+With training phase complete, the trained model can now inferencing. 
+Model is software program that encapsulates the function produced by the training process. 
+You input set of feature values and receive as output a prediction of corresponding label.
+ Because output = a prediction, NOT an observed value, output is shown as ŷ (verbalized "y-hat").
