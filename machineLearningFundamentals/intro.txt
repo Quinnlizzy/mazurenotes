@@ -1,0 +1,6 @@
+Machine learning 
+the intersection of two disciplines - data science and software engineering. 
+The goal: use data to create a predictive model that can be incorporated into app/service. 
+Requires collab between:
+1. data scientists(explore and prepare the data) and use it to TRAIN a machine learning model
+2. software developers who integrate the models into apps used to predict new data values (inferencing).
