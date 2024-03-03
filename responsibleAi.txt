@@ -25,4 +25,15 @@ As system uses new data & makes predictions/action, the data and decisions made 
 
 Inclusiveness
 AI should empower & engage everyone
-Should bring benefits to all parts of society, regardless of gender/sexual orientation/ethnicity etc
+Should bring benefits to all parts of society regardless 
+
+
+Transparency
+systems should be understandable. 
+Users be made fully aware of purpose of system, how works, any limitations.
+
+
+Accountability
+People be accountable for AI systems
+Designers and devs of AI solutions should work in a framework of governance and organizational principles 
+ensuring the solution meets clearly defined ethical & legal standards.
