@@ -4,3 +4,12 @@ Analyze and interpret text in doc, email msgs
 Interpret spoken language, and synthesize speech responses.
 Automatically translate spoken/written phrases between languages.
 Interpret commands and determine actions.
+
+Microsoft's Azure AI Language to build natural language processing solutions.
+Features include understanding and analyzing text, training conversational language models (can understand spoken 
+or text-based commands) 
+
+Microsoft's Azure AI Speech to build natural language processing solutions.
+features include speech recognition and synthesis, real-time translations, transcriptions
+
+Azure Language Studio and Azure Speech Studio
