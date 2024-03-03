@@ -7,3 +7,32 @@ E.g.:
 - Ice cream store might use app that combines past sales and weather records to predict sales based on that days forecast
 - Doctor use data from past patients to run tests that predict if patient is at risk from diabetes based on various measurements.
 - Researcher use past obs to automate the ID of penguin species based on measurements of flippers/bill etc
+
+Machine learning as a function
+ - Because based on maths/stats, common to think of ML models in mathematical terms. 
+ - Fundamentally, an ML model is an app that encapsulates a function to calculate an output value based on input value(s).
+ - The process of defining the function = training.
+ - After function is defined, you can use it to predict new values via inferencing.
+
+
+Training data consists of:
+ - past obs that include attributes/features of the thing being observed.
+ - the known value of the thing you want to train a model to predict (the label).
+
+Mathematical terms: 
+ - features = variable name x, 
+ - label = y. 
+
+Obs will have multiple feature values, so x is actually a vector (an array with multiple values: [x1,x2,x3,...]).
+
+
+consider prev examples:
+ - ice cream sales;   goal = train a model that can predict ice cream sales based on weather.
+                      Weather measurements (temp, rain etc) are features (x)
+                      Number of ice creams sold each day is label (y).
+ - medical scenario;  goal = predict if patient is diabetes risk 
+                      Clinical measurements (weight, glucose level) are features (x)
+                      Likelihood of diabetes (1 for risk, 0 for not) is label (y).
+ - Research scenario; goal = predict the penguin species based on physical attributes. 
+                      Penguin measurements (flipper length, bill width) are features (x), 
+                      Species (0 for Adelie, 1 for Gentoo etc) is label (y).
