@@ -15,3 +15,16 @@ E.g. no. ice creams sold per day, based on the temp/rain etc, fuel efficiency ba
 
 Classification (SML):
 SML where label represents a categorization/class. Two common classification scenarios.
+
+     1)Binary classification
+       The label determines whether the observed item is (or isn't) an instance of a specific class.
+       Effectively the model predicts one of two mutually exclusive outcomes. E.g.
+        - Whether patient is diabetes risk based on clinical metrics(weight/age etc)
+        - Whether bank customer will default on loan based on income/credit history etc.
+       In these examples, model predicts a binary true/false or positive/negative prediction for a single possible class.
+
+     2)Multiclass classification
+       Extends binary classification to predict label that is one of multiple possible classes. E.g.
+        - Species of a penguin (Adelie, Gentoo, or Chinstrap) based on physical measurements.
+        - Genre of movie (comedy/horror/romance etc) based on cast/director/budget.
+       In most scenarios that involve a known set of multiple classes, multiclass classification is used to predict mutually exclusive labels. For example, a penguin can't be both a Gentoo and an Adelie. However, there are also some algorithms that you can use to train multilabel classification models, in which there may be more than one valid label for a single observation. For example, a movie could potentially be categorized as both science fiction and comedy.
