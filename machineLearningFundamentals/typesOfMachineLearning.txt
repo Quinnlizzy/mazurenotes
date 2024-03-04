@@ -41,6 +41,7 @@ Involves training models using data that with only feature values (no known labe
 UML algorithms determine relationships between features of the obs & in the training data.
 
 
+
 Clustering (UML)
 Most common form of UML is clustering. 
 Clustering algorithm identifies similarities between obs based on features & groups them into discrete clusters
