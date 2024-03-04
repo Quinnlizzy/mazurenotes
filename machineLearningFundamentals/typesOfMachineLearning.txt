@@ -1,2 +1,9 @@
 There are multiple types of machine learning; 
 you must apply the appropriate type depending on what trying to predict.
+
+Supervised machine learning:
+general term for ML algorithms where training data includes BOTH feature values and known label values.
+It's used to train models by determining relationship between features & labels in past obs.
+Then unknown labels can be predicted for features in future cases.
+
+
