@@ -1,9 +1,17 @@
 There are multiple types of machine learning; 
 you must apply the appropriate type depending on what trying to predict.
 
-Supervised machine learning:
+
+Supervised machine learning (SML):
 general term for ML algorithms where training data includes BOTH feature values and known label values.
 It's used to train models by determining relationship between features & labels in past obs.
 Then unknown labels can be predicted for features in future cases.
 
 
+Regression (SML):
+Form of SML where the label predicted is numeric value.
+E.g. no. ice creams sold per day, based on the temp/rain etc, fuel efficiency based on car engine/weight etc
+
+
+Classification (SML):
+SML where label represents a categorization/class. Two common classification scenarios.
