@@ -48,8 +48,13 @@ Clustering algorithm identifies similarities between obs based on features & gro
           Identify groups of similar customers based on demographic/purchasing behavior.
 Clustering has some similarities to multiclass classification; it categorizes obs into discrete groups. 
 Difference is:
-     - with classification, you already know the classes to which obs in the training data belong
+     - In classification, you already know the classes to which obs in the training data belong
        Therefore, the algorithm works by determining the relationship between features and known classification label. 
-In clustering, there's no previously known cluster label and the algorithm groups the data observations based purely on similarity of features.
+     - In clustering, there's no previously known cluster label
+       the algorithm groups the data obs based purely on similarity of features.
 
-In some cases, clustering is used to determine the set of classes that exist before training a classification model. For example, you might use clustering to segment your customers into groups, and then analyze those groups to identify and categorize different classes of customer (high value - low volume, frequent small purchaser, and so on). You could then use your categorizations to label the observations in your clustering results and use the labeled data to train a classification model that predicts to which customer category a new customer might belong.
+Sometimes clustering is used to determine the set of classes that exist BEFORE training a classification model.
+      E.g. might use clustering to segment customers into groups, 
+           then analyze the groups to identify/categorize different types of customer (high value/low volume etc). 
+           Could then use categorizations to label obs in your clustering results 
+           & use labeled data to train a classification model that predicts to which customer category a new customer might belong.
