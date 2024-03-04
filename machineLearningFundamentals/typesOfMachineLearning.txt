@@ -1,0 +1,2 @@
+There are multiple types of machine learning; 
+you must apply the appropriate type depending on what trying to predict.
