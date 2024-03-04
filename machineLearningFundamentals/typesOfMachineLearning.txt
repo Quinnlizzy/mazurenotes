@@ -47,6 +47,7 @@ Most common form of UML is clustering.
 Clustering algorithm identifies similarities between obs based on features & groups them into discrete clusters
      E.g. Group similar flowers based on size/leaves/number of petals.
           Identify groups of similar customers based on demographic/purchasing behavior.
+          
 Clustering has some similarities to multiclass classification; it categorizes obs into discrete groups. 
 Difference is:
      - In classification, you already know the classes to which obs in the training data belong
