@@ -32,3 +32,11 @@ SML where label represents a categorization/class. Two common classification sce
        However, there are algorithms that you can use to train multilabel classification models where there may be 
        more than one valid label for a single obs (e.g. film could be science fiction AND comedy).
 
+
+
+
+
+Unsupervised machine learning (UML)
+Involves training models using data that with only feature values (no known labels). 
+UML algorithms determine relationships between features of the obs & in the training data.
+
