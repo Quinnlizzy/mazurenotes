@@ -6,4 +6,4 @@ Process for training a regression model:
            - to train model,
            - evaluate model predictive performance
            - refine model by repeating training process with different algorithms/parameters
-           - until you achieve an acceptable level of predictive accuracy.
+           - until achieve acceptable level of predictive accuracy.
