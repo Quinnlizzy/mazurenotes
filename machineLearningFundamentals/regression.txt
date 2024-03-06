@@ -1,6 +1,8 @@
 Regression
+
 these models are trained to predict numeric label values
 they are based on training data that includes both features and known labels
+
 Process for training a regression model:
            - multiple iterations in which you use an appropriate algorithm (usually with some parameterized settings)
            - to train model,
