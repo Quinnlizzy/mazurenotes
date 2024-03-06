@@ -10,8 +10,12 @@ Process for training a regression model:
 
 4 key elements of SML training models:
 
-   - Split training data (randomly) to create dataset to train model + holding back subset of data for model validation.
-   - Use algorithm to fit training data to model. In regression model, use regression algorithm (e.g. linear regression).
-Use the validation data you held back to test the model by predicting labels for the features.
-Compare the known actual labels in the validation dataset to the labels that the model predicted. Then aggregate the differences between the predicted and actual label values to calculate a metric that indicates how accurately the model predicted for the validation data.
-After each train, validate, and evaluate iteration, you can repeat the process with different algorithms and parameters until an acceptable evaluation metric is achieved.
+         1 - Split training data (randomly) to create dataset to train model + holding back subset of data for model validation.
+         2 - Use algorithm to fit training data to model. In regression model, use regression algorithm (e.g. linear regression).
+         3 - Use held back validation data from step 1 to test model by predicting labels for features.
+         4 - Compare known actual labels in validation dataset to the labels that the model predicted. 
+             Then aggregate differences between predicted/actual label values 
+             Then calculate metric that indicates model prediction accuracy for validation data.
+
+    After each train/validate/evaluate iteration, repeat process with different algorithms/parameters 
+    do until acceptable evaluation metric is achieved.
