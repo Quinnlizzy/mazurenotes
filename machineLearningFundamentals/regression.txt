@@ -1,5 +1,6 @@
 Regression
 these models are trained to predict numeric label values
 they are based on training data that includes both features and known labels
-Process for training a regression model = multiple iterations in which you use an appropriate algorithm 
-                                          (usually with some parameterized settings) to train a model, evaluate the model's predictive performance, and refine the model by repeating the training process with different algorithms and parameters until you achieve an acceptable level of predictive accuracy.
+Process for training a regression model:
+           - multiple iterations in which you use an appropriate algorithm (usually with some parameterized settings)
+                                          to train a model, evaluate model's predictive performance, and refine the model by repeating the training process with different algorithms and parameters until you achieve an acceptable level of predictive accuracy.
