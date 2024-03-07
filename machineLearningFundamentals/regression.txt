@@ -112,3 +112,25 @@ Temperature (x)	Ice cream sales (y)
             Predicted labels are calculated by the model so they're on the 'function line'
             Shows there's variance between the ŷ(predicted) and y(actual) values from the validation dataset. 
             Can show this on plot as line between ŷ and y values (shows how far off prediction was).
+
+
+Regression evaluation metrics
+Based on differences between predicted & actual values, you can calculate common metrics used to evaluate a regression model.
+
+
+Mean Absolute Error (MAE)
+Variance in our example indicates by how many ice creams each prediction was wrong. 
+Doesn't matter if prediction was over/under (-3 & +3 both indicate variance of 3). 
+This metric is known as 'absolute error' for each prediction.
+Summarized for whole validation set as mean absolute error (MAE).
+          Ice cream example; the mean (average) of the absolute errors (2, 3, 3, 1, 2, and 3) is 2.33.
+
+
+Mean Squared Error (MSE)  
+Mean absolute error metric takes all discrepancies between predicted & actual labels into account equally.
+However, may be better to have model that is consistently wrong by a SMALL amount instead of fewer, but larger errors.
+Can produce a metric that "amplifies" larger errors by squaring the individual errors and calculating mean of squared values.
+This is known as mean squared error (MSE).
+          Ice cream example; mean of squared absolute values (4, 9, 9, 1, 4, and 9) is 6.
+
+
