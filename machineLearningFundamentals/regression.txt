@@ -82,16 +82,16 @@ Based on ice cream sales scenario;
 
 Evaluating regression model
 
-How accurate is model?
-To validate model and evaluate prediction quality we need the held back dataset:
+        How accurate is model?
+        To validate model and evaluate prediction quality we need the held back dataset:
 
-Temperature (x)	Ice cream sales (y)
-            52	0
-            67	14
-            70	23
-            73	22
-            78	26
-            83	36
+        Temperature (x)	Ice cream sales (y)
+                    52	0
+                    67	14
+                    70	23
+                    73	22
+                    78	26
+                    83	36
 
             Now, use our model to predict the label for each of the obs in this dataset.
             So, based on (x) value; compare predicted label (ŷ)(so x-50) to known actual label value (y)(what happened in reality).
@@ -116,55 +116,71 @@ Temperature (x)	Ice cream sales (y)
 
 Regression evaluation metrics
 
-Based on differences between predicted & actual values, you can calculate common metrics used to evaluate a regression model.
+        Based on diffs between predicted & actual values, can calculate common metrics used to evaluate regression model.
 
 
 Mean Absolute Error (MAE)
 
-Variance in our example indicates by how many ice creams each prediction was wrong. 
-Doesn't matter if prediction was over/under (-3 & +3 both indicate variance of 3). 
-This metric is known as 'absolute error' for each prediction.
-Summarized for whole validation set as mean absolute error (MAE).
-          Ice cream example; the mean (average) of the absolute errors (2, 3, 3, 1, 2, and 3) is 2.33.
+        Variance in our example indicates by how many ice creams each prediction was wrong. 
+        Doesn't matter if prediction was over/under (-3 & +3 both indicate variance of 3). 
+        This metric is known as 'absolute error' for each prediction.
+        Summarized for whole validation set as mean absolute error (MAE).
+                Ice cream example; the mean (average) of the absolute errors (2, 3, 3, 1, 2, and 3) is 2.33.
 
 
 Mean Squared Error (MSE)  
 
-Mean absolute error metric takes all discrepancies between predicted & actual labels into account equally.
-However, may be better to have model that is consistently wrong by a SMALL amount instead of fewer, but larger errors.
-Can produce a metric that "amplifies" larger errors by squaring the individual errors and calculating mean of squared values.
-This is known as mean squared error (MSE).
-          Ice cream example; mean of squared absolute values (4, 9, 9, 1, 4, and 9) is 6.
+        Mean absolute error metric takes all discrepancies between predicted & actual labels into account equally.
+        However, may be better to have model that is consistently wrong by a SMALL amount instead of fewer, but larger errors.
+        Can produce metric that "amplifies" larger errors by squaring individual errors and calculating mean of squared values.
+        This is known as mean squared error (MSE).
+                Ice cream example; mean of squared absolute values (4, 9, 9, 1, 4, and 9) is 6.
 
 
 Root Mean Squared Error (RMSE)
 
-Mean squared error helps take magnitude of errors into account
-But because it squares error values, resulting metric no longer represents the quantity measured by label.
-We can say MSE of our model = 6, but that doesn't measure its accuracy in terms of no. of ice creams mispredicted
-(6 is just numeric score that indicates level of error in validation predictions).
-To measure error in tetms of no. of ice creams, need to calculate the square root of MSE.
-This produces metric called Root Mean Squared Error. So √6 is 2.45 (ice creams).
+        Mean squared error helps take magnitude of errors into account
+        But because it squares error values, resulting metric no longer represents the quantity measured by label.
+        Can say MSE of our model = 6, but that doesn't measure its accuracy in terms of no. of ice creams mispredicted
+        (6 is just numeric score that indicates level of error in validation predictions).
+        To measure error in tetms of no. of ice creams, need to calculate the square root of MSE.
+        This produces metric called Root Mean Squared Error. So √6 is 2.45 (ice creams).
 
 
 Coefficient of determination (R2)
 
-All metrics so far evaluate model by compare discrepancy between the predicted and actual values.
-However, in reality, there's natural random variance in daily sales of ice cream the model takes into account.
-In linear regression model; training algorithm fits a straight line that minimizes mean variance between function & known label.
-       Coefficient of determination (R2 or R-Squared) is metric that measures proportion of variance in validation results 
-       that can be explained by model, as opposed to any anomalous aspect of validation data 
-       (e.g. a day with unusual no. of ice creams sales because local event).
+        All metrics so far evaluate model by compare discrepancy between the predicted and actual values.
+        However, in reality, there's natural random variance in daily sales of ice cream the model takes into account.
+        In linear reg model; training algorithm fits straight line that minimizes mean variance between func & known label.
+            Coefficient of determination (R2/R-Squared) is metric that measures proportion of variance in validation results 
+            that can be explained by model, as opposed to any anomalous aspect of validation data 
+            (e.g. a day with unusual no. of ice creams sales because local event).
 
-The calculation for R2 is more complex than previous metrics. 
-It compares:
-       a)sum of squared differences between predicted & actual labels
-       b)with sum of squared differences between the actual label values & mean of actual label values:
+        The calculation for R2 is more complex than previous metrics. 
+        It compares:
+            a)sum of squared differences between predicted & actual labels
+            b)with sum of squared differences between the actual label values & mean of actual label values:
 
-       R2 = 1- ∑(y-ŷ)2 ÷ ∑(y-ȳ)2
+            R2 = 1- ∑(y-ŷ)2 ÷ ∑(y-ȳ)2
 
-Most machine learning tools can calculate this metric for you. 
-Important point is the result = value between 0 and 1 that describes proportion of variance explained by the model.
-      
-       The closer to 1 R2 is = better the model is fitting the validation data. 
-       In ice cream regression model, the R2 = 0.95.
+        Most machine learning tools can calculate this metric for you. 
+        Important point is the result = value between 0 and 1 that describes proportion of variance explained by the model.
+            
+            The closer to 1 R2 is = better the model is fitting the validation data. 
+            In ice cream regression model, the R2 = 0.95.
+
+
+Iterative training
+        Metrics described above = commonly used to evaluate reg model. 
+        In most real-world scenarios, data scientist will use an iterative process
+        This will repeatedly train and evaluate a model.
+        They will vary:
+
+            - Feature selection and preparation 
+              (choosing which features to include in model & calculations applied to them to help ensure a better fit).
+            - Algorithm selection 
+              (far more than just linear regression algorithms)
+            - Algorithm parameters
+              (numeric settings to control algorithm behavior, called hyperparameters to differentiate from x and y parameters).
+            
+        After multiple iterations; model that results in the best evaluation metric acceptable for specific scenario is selected.
