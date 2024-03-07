@@ -93,3 +93,8 @@ Temperature (x)	Ice cream sales (y)
             78	26
             83	36
 
+Now, use our model to predict the label for each of the obs in this dataset.
+So, based on (x) value; compare predicted label (ŷ)(so x-50) to known actual label value (y)(what happened in reality).
+
+Using model trained earlier, (function f(x) = x-50) results in the following predictions:
+
