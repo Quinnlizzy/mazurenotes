@@ -59,3 +59,24 @@ Based on ice cream sales scenario;
                     72	     23
                     75	     26
                     81	     30
+    
+        Then, to understand how relate to one another - plot cordinates along two axes. Point graph.
+
+        Now can apply algorithm to training data & fit to a function that applies operation to (x) to calculate y. 
+        
+        One algorithm is linear regression; works by deriving a function that produces a straight line through the intersections 
+        of x and y values while minimizing the average distance between line and plotted points
+        (think line showing general trend on a graph)
+
+        Line is a visual representation of the function where slope the line shows how calculate value of y for given value of x. 
+        E.g. Line intercepts the x axis at 50, so when x = 50, y = 0. 
+        Line slopes so that every increase of 5 along the x axis = increase of 5 up y axis (x=55, y=5; x=60, y=10)
+       
+
+                 So, to calculate value of y when given value of x, the function simply subtracts 50; f(x) = x-50
+
+
+        Can now predict no. of ice creams sold on a day by its temp. 
+        E.g. if weather will be 77 degrees; 77-50 = sell 27 ice creams.
+
+But just how accurate is our model?
