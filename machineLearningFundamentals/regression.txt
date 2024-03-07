@@ -134,3 +134,10 @@ This is known as mean squared error (MSE).
           Ice cream example; mean of squared absolute values (4, 9, 9, 1, 4, and 9) is 6.
 
 
+Root Mean Squared Error (RMSE)
+Mean squared error helps take magnitude of errors into account
+But because it squares error values, resulting metric no longer represents the quantity measured by label.
+We can say MSE of our model = 6, but that doesn't measure its accuracy in terms of no. of ice creams mispredicted
+(6 is just numeric score that indicates level of error in validation predictions).
+To measure error in tetms of no. of ice creams, need to calculate the square root of MSE.
+This produces metric called Root Mean Squared Error. So √6 is 2.45 (ice creams).
