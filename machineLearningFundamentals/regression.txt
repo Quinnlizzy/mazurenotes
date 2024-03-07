@@ -85,3 +85,11 @@ Evaluating regression model
 How accurate is model?
 To validate model and evaluate prediction quality we need the held back dataset:
 
+Temperature (x)	Ice cream sales (y)
+            52	0
+            67	14
+            70	23
+            73	22
+            78	26
+            83	36
+
