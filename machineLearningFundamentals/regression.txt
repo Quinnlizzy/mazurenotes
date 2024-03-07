@@ -93,8 +93,22 @@ Temperature (x)	Ice cream sales (y)
             78	26
             83	36
 
-Now, use our model to predict the label for each of the obs in this dataset.
-So, based on (x) value; compare predicted label (ŷ)(so x-50) to known actual label value (y)(what happened in reality).
+            Now, use our model to predict the label for each of the obs in this dataset.
+            So, based on (x) value; compare predicted label (ŷ)(so x-50) to known actual label value (y)(what happened in reality).
 
-Using model trained earlier, (function f(x) = x-50) results in the following predictions:
+            Using model trained earlier, (function f(x) = x-50) results in the following predictions:
 
+            Temperature (x)	Actual sales (y)	Predicted sales (ŷ)
+                    52	           0                 	2
+                    67	           14                	17
+                    70	           23	                20
+                    73	           22	                23
+                    78	           26	                28
+                    83	           36	                33
+
+            
+            Now again plot on axes labels(pred and act) against feature values.
+
+            Predicted labels are calculated by the model so they're on the 'function line'
+            Shows there's variance between the ŷ(predicted) and y(actual) values from the validation dataset. 
+            Can show this on plot as line between ŷ and y values (shows how far off prediction was).
