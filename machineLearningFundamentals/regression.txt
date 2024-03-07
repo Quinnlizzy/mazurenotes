@@ -31,4 +31,31 @@ Train a model to predict numeric label (y) based on single feature value (x).
 Based on ice cream sales scenario;
          For our feature, consider temperature (max temp of a day), 
          For label, we want to train model to predict the number of ice creams sold that day. 
+         
          We start with historic data that includes records of daily tempe (x) and ice cream sales (y):
+
+         Temperature (x)	Ice cream sales (y)
+                    51	     1
+                    52	     0
+                    67	     14
+                    65       14
+                    70	     23
+                    69	     20
+                    72	     23
+                    75	     26
+                    73	     22
+                    81	     30
+                    78	     26
+                    83	     36
+
+        Then we train the model.
+        Start by splitting data & using subset of it to train a model. 
+        Here's the training dataset:
+
+         Temperature (x)	Ice cream sales (y)
+                    51	     1
+                    65	     14
+                    69	     20
+                    72	     23
+                    75	     26
+                    81	     30
