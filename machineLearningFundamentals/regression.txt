@@ -79,4 +79,9 @@ Based on ice cream sales scenario;
         Can now predict no. of ice creams sold on a day by its temp. 
         E.g. if weather will be 77 degrees; 77-50 = sell 27 ice creams.
 
-But just how accurate is our model?
+
+Evaluating regression model
+
+How accurate is model?
+To validate model and evaluate prediction quality we need the held back dataset:
+
