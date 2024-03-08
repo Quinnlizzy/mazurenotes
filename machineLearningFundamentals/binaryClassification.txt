@@ -56,4 +56,5 @@ Threshold lies at mid-point for y (P(y) = 0.5).
 Values at this point or above; model predicts true (1);
 Values below will predict false (0). 
 
-E.g. patient with blood glucose 90; func result in probability value of 0.9. Since 0.9 is higher than the threshold of 0.5, the model would predict true (1) - in other words, the patient is predicted to have diabetes.
+            E.g. patient with blood glucose 90; func result in probability value 0.9. 
+            0.9 higher than threshold of 0.5 so model predicts true (1) (diabetes).
