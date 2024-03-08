@@ -138,3 +138,16 @@ Compare number of patients who have ACTUALLY have diabetes, to how many model pr
                                                = 0.75
 
 So model correctly identified 75% of patients who ACTUALLY have diabetes as having diabetes.
+
+
+
+Precision
+Similar to recall, but measures proportion of predicted +ve cases where true label is actually positive. 
+Basically, what proportion of patients the model predicted to have diabetes ACTUALLY have diabetes?
+
+                    The formula for precision is: TP ÷ (TP+FP)
+                    For our diabetes example:     3 ÷ (3+0)
+                                                  = 3 ÷ 3
+                                                  = 1.0
+
+So 100% of patients predicted by model to have diabetes ACTUALLY have diabetes.
