@@ -107,18 +107,34 @@ possible class label:
 
 
 Accuracy
-The simplest metric you can calculate from the confusion matrix is accuracy - the proportion of predictions that the model got right. Accuracy is calculated as:
+Simplest metric calculable from confusion matrix is accuracy (proportion of predictions that the model got right).
+        Accuracy is calculated as:
 
-(TN+TP) ÷ (TN+FN+FP+TP)
+                                    (TN+TP) ÷ (TN+FN+FP+TP)
 
-In the case of our diabetes example, the calculation is:
+        In the case of our diabetes example, the calculation is:
 
-(2+3) ÷ (2+1+0+3)
+                                    (2+3) ÷ (2+1+0+3)
+                                    = 5 ÷ 6
+                                    = 0.83
 
-= 5 ÷ 6
+        So model produced correct predictions 83% of the time.
 
-= 0.83
+Accuracy might initially seem a good metric to eval a model
+BUT suppose 11% of population has diabetes; 
+                  in theory you could create a model that just always predicts 0, 
+                  and it would achieve an accuracy of 89% (even though it makes attempt to differentiate)
+                  Really need deeper understanding of how model performs at predicting 1 for +ve & 0 -ve.
 
-So for our validation data, the diabetes classification model produced correct predictions 83% of the time.
 
-Accuracy might initially seem like a good metric to evaluate a model, but consider this. Suppose 11% of the population has diabetes. You could create a model that always predicts 0, and it would achieve an accuracy of 89%, even though it makes no real attempt to differentiate between patients by evaluating their features. What we really need is a deeper understanding of how the model performs at predicting 1 for positive cases and 0 for negative cases.
+
+Recall
+A metric that measures proportion of +ve cases that the model identified correctly.
+Compare number of patients who have ACTUALLY have diabetes, to how many model predicted have diabetes?
+
+                    The formula for recall is: TP ÷ (TP+FN)
+                    For our diabetes example:  3 ÷ (3+1)
+                                               = 3 ÷ 4
+                                               = 0.75
+
+So model correctly identified 75% of patients who ACTUALLY have diabetes as having diabetes.
