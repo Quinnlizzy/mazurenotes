@@ -151,3 +151,36 @@ Basically, what proportion of patients the model predicted to have diabetes ACTU
                                                   = 1.0
 
 So 100% of patients predicted by model to have diabetes ACTUALLY have diabetes.
+
+
+
+F1-score
+An overall metric that combines recall & precision. 
+
+                    Formula for F1-score is:   (2 x Precision x Recall) ÷ (Precision + Recall)
+                    For our diabetes example:  (2 x 1.0 x 0.75) ÷ (1.0 + 0.75)
+                                               = 1.5 ÷ 1.75
+                                               =0.86
+
+
+
+Area Under the Curve (AUC)
+Another name for recall is true positive rate (TPR)
+equivalent metric called the false positive rate (FPR) that is calculated as FP÷(FP+TN). 
+Already know that the TPR for our model when using a threshold of 0.5 is 0.75.
+Can use the formula for FPR to calculate a value of 0÷2 = 0.
+
+        If we change threshold for true (1), it would affect no. of +ve & -ve predictions & change the TPR and FPR metrics. 
+        These metrics are used to evaluate a model by plotting a received operator characteristic (ROC) curve 
+        (compares the TPR and FPR for every possible threshold value between 0.0 and 1.0)
+
+
+ROC curve for perfect model would go straight up TPR axis on left and across the FPR axis top. 
+Since plot area for curve measures 1x1, the area under this perfect curve would be 1.0 (means model correct 100% of time). 
+
+A diagonal line from bottom-left to top-right = results that would be achieved by randomly guessing a binary label;
+producing an area under the curve of 0.5.
+In other words, given two possible class labels, expect to guess correctly 50% of time.
+
+        In case of diabetes model, the curve above is produced & area under curve (AUC) metric is 0.875. 
+        Since AUC higher than 0.5, we can conclude model performs better at predicting if patient diabetes than randomly guessing.
