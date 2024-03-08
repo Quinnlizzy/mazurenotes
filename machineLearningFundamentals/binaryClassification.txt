@@ -1,0 +1,19 @@
+Binary classification
+Completed
+100 XP
+12 minutes
+Classification, like regression, is a supervised machine learning technique; and therefore follows the same iterative process of training, validating, and evaluating models. Instead of calculating numeric values like a regression model, the algorithms used to train classification models calculate probability values for class assignment and the evaluation metrics used to assess model performance compare the predicted classes to the actual classes.
+
+Binary classification algorithms are used to train a model that predicts one of two possible labels for a single class. Essentially, predicting true or false. In most real scenarios, the data observations used to train and validate the model consist of multiple feature (x) values and a y value that is either 1 or 0.
+
+Example - binary classification
+To understand how binary classification works, let's look at a simplified example that uses a single feature (x) to predict whether the label y is 1 or 0. In this example, we'll use the blood glucose level of a patient to predict whether or not the patient has diabetes. Here's the data with which we'll train the model:
+
+Diagram of a syringe.	Diagram of a diabetic and non-diabetic person.
+Blood glucose (x)	Diabetic? (y)
+67	0
+103	1
+114	1
+72	0
+116	1
+65	0
