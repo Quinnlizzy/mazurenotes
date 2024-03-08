@@ -47,6 +47,7 @@ For 3.6 obs in training data, we know y is true.
 Therefore, probability for those obs that y=1 is 1.0
 For other three, we know y is false.
 Therefore, probability that y=1 is 0.0. 
-S-shaped curve describes probability distribution; plotting a value of x on the line identifies corresponding probability that y is 1.
+S-shaped curve describes probability distribution; 
+Therefore, plotting a value of x on the line identifies corresponding probability that y is 1.
 
 The diagram also includes a horizontal line to indicate the threshold at which a model based on this function will predict true (1) or false (0). The threshold lies at the mid-point for y (P(y) = 0.5). For any values at this point or above, the model will predict true (1); while for any values below this point it will predict false (0). For example, for a patient with a blood glucose level of 90, the function would result in a probability value of 0.9. Since 0.9 is higher than the threshold of 0.5, the model would predict true (1) - in other words, the patient is predicted to have diabetes.
