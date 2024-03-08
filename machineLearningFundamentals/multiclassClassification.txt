@@ -1,0 +1,96 @@
+Multiclass classification
+Used to predict to which of multiple possible classes an obs belongs. 
+As SML technique, it follows the same iterative train/validate/evaluate process as reg & binClass
+(subset of training data held back to validate model).
+
+
+Example
+Multiclass classification algorithms used to calc probability values for multiple class labels
+this model to predict most probable class for a given obs.
+
+            Example with obs of penguins where flipper length (x) of each penguin is recorded. 
+            For each obs, data includes penguin species (y), encoded as follows:
+
+            0: Adelie
+            1: Gentoo
+            2: Chinstrap
+
+            (Real scenario would include multiple feature (x) values. But here use a single feature to keep things simple.)
+
+            Flipper length (x)	Species (y)
+                            167	0
+                            172	0
+                            225	2
+                            197	1
+                            189	1
+                            232	2
+                            158	0
+
+
+Training a multiclass classification model
+Need to use algorithm to fit training data to a func that calc a probability value for each possible class. 
+Two kinds of algorithm you can use:
+                    One-vs-Rest (OvR) algorithms
+                    Multinomial algorithms
+
+
+One-vs-Rest (OvR) algorithms
+These train a binary classification func for each class.
+each calculating the probability that the obs is an example of the target class. 
+Each funct calculates the probability of the obs being a specific class vs any other class. 
+
+For penguin classification model, algorithm would create three binary classification functions:
+                    f0(x) = P(y=0 | x)
+                    f1(x) = P(y=1 | x)
+                    f2(x) = P(y=2 | x)
+
+Each algorithm produces a sigmoid function 
+that func calculates a probability value between 0.0 and 1.0. 
+Model trained using this kind of algorithm predicts class for the func that produces the highest probability output.
+
+
+
+Multinomial algorithms
+alt approach which creates single func that returns multi-valued output. 
+Output is a vector (array of values) that contains probability distribution for all poss classes
+(with probability score for each class add up to total of 1.0):
+                    f(x) =[P(y=0|x), P(y=1|x), P(y=2|x)]
+
+Example of this function is softmax func, which could produce an output like the following example:
+                   [0.2, 0.3, 0.5]
+
+The elements in the vector represent the probabilities for classes 0, 1, and 2 respectively; so in this case, the class with the highest probability is 2.
+
+Regardless of which type of algorithm is used, the model uses the resulting function to determine the most probable class for a given set of features (x) and predicts the corresponding class label (y).
+
+Evaluating a multiclass classification model
+You can evaluate a multiclass classifier by calculating binary classification metrics for each individual class. Alternatively, you can calculate aggregate metrics that take all classes into account.
+
+Let's assume that we've validated our multiclass classifier, and obtained the following results:
+
+Flipper length (x)	Actual species (y)	Predicted species (ŷ)
+165	0	0
+171	0	0
+205	2	1
+195	1	1
+183	1	1
+221	2	2
+214	2	2
+The confusion matrix for a multiclass classifier is similar to that of a binary classifier, except that it shows the number of predictions for each combination of predicted (ŷ) and actual class labels (y):
+
+Diagram of a multiclass confusion matrix.
+
+From this confusion matrix, we can determine the metrics for each individual class as follows:
+
+Class	TP	TN	FP	FN	Accuracy	Recall	Precision	F1-Score
+0	2	5	0	0	1.0	1.0	1.0	1.0
+1	2	4	1	0	0.86	1.0	0.67	0.8
+2	2	4	0	1	0.86	0.67	1.0	0.8
+To calculate the overall accuracy, recall, and precision metrics, you use the total of the TP, TN, FP, and FN metrics:
+
+Overall accuracy = (13+6)÷(13+6+1+1) = 0.90
+Overall recall = 6÷(6+1) = 0.86
+Overall precision = 6÷(6+1) = 0.86
+The overall F1-score is calculated using the overall recall and precision metrics:
+
+Overall F1-score = (2x0.86x0.86)÷(0.86+0.86) = 0.86
