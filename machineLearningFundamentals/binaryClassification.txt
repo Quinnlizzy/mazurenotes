@@ -58,3 +58,67 @@ Values below will predict false (0).
 
             E.g. patient with blood glucose 90; func result in probability value 0.9. 
             0.9 higher than threshold of 0.5 so model predicts true (1) (diabetes).
+
+
+
+Evaluating binClass Model
+Like regression, hold back random subset of data to validate trained model. 
+        
+        Assume held back following data to validate our diabetes classifier:
+                Blood glucose (x)	Diabetic? (y)
+                                66	0
+                                107	1
+                                112	1
+                                71	0
+                                87	1
+                                89	1
+        Applying logistic func derived previously to the x values results in new plot.
+        Based on whether probability calculated by func is above/below threshold,
+        the model generates predicted label of 1 or 0 for each obs. 
+        We then compare predicted class labels (ŷ) to actual class labels (y):
+
+                Blood glucose (x)	Actual diabetes diagnosis (y)	Predicted diabetes diagnosis (ŷ)
+                                                66	0	0
+                                                107	1	1
+                                                112	1	1
+                                                71	0	0
+                                                87	1	0
+                                                89	1	1
+    
+
+
+BinClass evaluation metrics
+
+First step in calc eval metrics for binClass model is to create matrix of no. of correct/incorrect predictions for each 
+possible class label:
+
+       Confusion matrix. Shows the prediction totals where:
+
+                            ŷ=0 and y=0: True negatives (TN)
+                            ŷ=1 and y=0: False positives (FP)
+                            ŷ=0 and y=1: False negatives (FN)
+                            ŷ=1 and y=1: True positives (TP)
+
+       The arrangement of confusion matrix shows that correct (true) predictions are shown in a diagonal line from 
+       top-left to bottom-right. 
+       Often, color-intensity is used to indicate no. of predictions in each cell, 
+       (so a quick glance at a model that predicts well should reveal deeply shaded diagonal trend).
+
+
+
+Accuracy
+The simplest metric you can calculate from the confusion matrix is accuracy - the proportion of predictions that the model got right. Accuracy is calculated as:
+
+(TN+TP) ÷ (TN+FN+FP+TP)
+
+In the case of our diabetes example, the calculation is:
+
+(2+3) ÷ (2+1+0+3)
+
+= 5 ÷ 6
+
+= 0.83
+
+So for our validation data, the diabetes classification model produced correct predictions 83% of the time.
+
+Accuracy might initially seem like a good metric to evaluate a model, but consider this. Suppose 11% of the population has diabetes. You could create a model that always predicts 0, and it would achieve an accuracy of 89%, even though it makes no real attempt to differentiate between patients by evaluating their features. What we really need is a deeper understanding of how the model performs at predicting 1 for positive cases and 0 for negative cases.
