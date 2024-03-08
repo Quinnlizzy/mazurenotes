@@ -1,19 +1,52 @@
 Binary classification
-Completed
-100 XP
-12 minutes
-Classification, like regression, is a supervised machine learning technique; and therefore follows the same iterative process of training, validating, and evaluating models. Instead of calculating numeric values like a regression model, the algorithms used to train classification models calculate probability values for class assignment and the evaluation metrics used to assess model performance compare the predicted classes to the actual classes.
 
-Binary classification algorithms are used to train a model that predicts one of two possible labels for a single class. Essentially, predicting true or false. In most real scenarios, the data observations used to train and validate the model consist of multiple feature (x) values and a y value that is either 1 or 0.
+Classification, like regression is SML technique.
+Therefore follows same iterative process; training, validating, evaluating models. 
 
-Example - binary classification
-To understand how binary classification works, let's look at a simplified example that uses a single feature (x) to predict whether the label y is 1 or 0. In this example, we'll use the blood glucose level of a patient to predict whether or not the patient has diabetes. Here's the data with which we'll train the model:
+        BUT Instead of calculating numeric values like regression;
+            - algorithms used to train classification models calculate probability values for class assignment 
+            - & evaluation metrics that assess model performance compare predicted classes to actual classes.
 
-Diagram of a syringe.	Diagram of a diabetic and non-diabetic person.
-Blood glucose (x)	Diabetic? (y)
-67	0
-103	1
-114	1
-72	0
-116	1
-65	0
+BinClass algorithms used to train model that predicts one of two possible labels for single class
+            - Basically; true or false. 
+            - Most scenarios; data obs used to train & validate model have multiple feature values(x) and a (y) value = 1 or 0.
+
+
+
+Example - binClass
+Simplified example using single feature (x) to predict whether label (y) is 1 or 0. 
+Use blood glucose level of a patient to predict if has diabetes. Data:
+
+            Blood glucose (x)	Diabetic? (y)
+                            67	0
+                            103	1
+                            114	1
+                            72	0
+                            116	1
+                            65	0
+
+
+Training binClass model
+Use an algorithm to fit training data to function that calculates probability of class label being true (diabetic)
+Probability measured as value between 0.0 and 1.0
+Total probability for all possible classes = 1.0. 
+
+            E.g. if probability of diabetes = 0.7, then corresponding probability of 0.3 of no diabetes.
+
+Many algorithms can be used for binClass.
+
+
+
+Logistic regression algorithm;
+
+Derives sigmoid (S-shaped graph) function with values between 0.0 and 1.0.
+Function produced by algorithm describes probability of y being true (y=1) for given value of x. 
+Mathematically, express function like this: f(x) = P(y=1 | x)
+
+For 3.6 obs in training data, we know y is true.
+Therefore, probability for those obs that y=1 is 1.0
+For other three, we know y is false.
+Therefore, probability that y=1 is 0.0. 
+S-shaped curve describes probability distribution; plotting a value of x on the line identifies the corresponding probability that y is 1.
+
+The diagram also includes a horizontal line to indicate the threshold at which a model based on this function will predict true (1) or false (0). The threshold lies at the mid-point for y (P(y) = 0.5). For any values at this point or above, the model will predict true (1); while for any values below this point it will predict false (0). For example, for a patient with a blood glucose level of 90, the function would result in a probability value of 0.9. Since 0.9 is higher than the threshold of 0.5, the model would predict true (1) - in other words, the patient is predicted to have diabetes.
