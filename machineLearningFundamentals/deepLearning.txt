@@ -1,0 +1,106 @@
+Deep Learning
+an advanced form of ML that tries to emulate the way the human brain learns.
+Key to DL is the creation of an artificial neural network that simulates electrochemical activity in biological neurons
+does this by using mathematical functions
+
+
+Neurons fire in response to electrochemical stimuli. 
+When fired, the signal is passed to connected neurons.	
+
+in DL: 
+        Each neuron is a funct that operates on an input value (x) and a weight (w). T
+        func is wrapped in an activation function that determines whether to pass the output on.
+
+        Artificial neural networks are made up of multiple layers of neurons 
+        OR In effect; a deeply nested function. 
+
+This architecture is the reason the technique is referred to as DL
+the models produced by it are often referred to as deep neural networks (DNNs). 
+Can use DNNs for many kinds of ML problem, inc regression and classification and more advanced models:
+        e.g. natural language processing
+             computer vision.
+
+
+Like other ML techniques, DL involves fitting training data to funct that can predict a label (y) based value of features (x).
+The function (f(x)) is the outer layer of a nested function 
+Then each layer of neural network encapsulates funct that operate on x & the weight (w) values associated with them. 
+
+Training algorithm = 
+        iteratively feeding feature values (x) in training data forward through layers to calc output values for ŷ, 
+        then validating model to evaluate how far off the calculated ŷ values are from known y values.
+        (quantifies level of error/loss in model). 
+        Then modify the weights (w) to reduce the loss. 
+        Trained model includes the final weight values that result in the most accurate predictions.
+
+
+
+Using DL for classification
+Example in which a neural network is used to define a classification model for penguin species.
+
+The feature data (x) consists of some measurements of a penguin. Specifically, the measurements are:
+
+            The length of the penguin's bill.     x1
+            The depth of the penguin's bill.      x2
+            The length of the penguin's flippers. x3
+            The penguin's weight.                 x4
+
+In this case, x is a vector of four values, or mathematically, x=[x1,x2,x3,x4].
+
+The label we try to predict (y) is species of the penguin, and that there are three possible species it could be:
+
+            Adelie
+            Gentoo
+            Chinstrap
+
+This is example of classification problem
+ML model must predict the most probable class to which an obs belongs. 
+A classification model accomplishes this by predicting a label that consists of probability for each class. 
+Basically, y is vector of 3 probability values; one for each of possible classes: [P(y=0|x), P(y=1|x), P(y=2|x)].
+
+
+
+The process for inferencing a predicted penguin class using this network is:
+
+       - The feature vector for a penguin obs is fed into input layer of the neural network
+         which consists of a neuron for each x value. 
+         In this example, following x vector is used as the input: [37.3, 16.8, 19.2, 30.0]
+       - The funcs for first layer of neurons each calc a weighted sum by combining the x value and w weight
+         then pass it to an activation funct that determines if meets the threshold to be passed to next layer.
+       - Each neuron in a layer is connected to all of the neurons in next layer 
+         (sometimes called a fully connected network)
+         so results of each layer are fed forward through the network until they reach the output layer.
+       - Output layer produces a vector of values; 
+         in this case, using a softmax or similar func to calc the probability distribution for the 3 poss classes of penguin.
+         In this example, the output vector is: [0.2, 0.7, 0.1]
+       - Elements of the vector represent the probabilities for classes 0, 1, and 2. 
+         Second value is the highest, so model predicts that the species of the penguin is 1 (Gentoo).
+
+
+
+How does a neural network learn?
+The weights in a neural network are central to how it calculates predicted values for labels.
+During the training process, the model learns the weights that will result in the most accurate predictions.
+
+
+       - Training and validation datasets are defined, and training features are fed into input layer.
+       - Neurons in each layer of network apply their weights (init assigned randomly) and feed the data through network.
+       - Output layer produces vector containing the calculated values for ŷ. 
+         e.g. output for penguin class prediction might be [0.3. 0.1. 0.6].
+       - A loss funct is used to compare predicted ŷ values to known y values & aggregate the difference (known as the loss). 
+         e.g. if known class for case that returned the output in previous step is Chinstrap, then y value should be [0.0, 0.0, 1.0].
+         The absolute difference between this and ŷ vector is [0.3, 0.1, 0.4]. 
+         In reality, loss function calcs the aggregate variance for multiple cases & summarizes as single loss value.
+       - Because network is one large nested func, 
+         an optimization func can use differential calculus to evaluate influence of each weight in network on the loss
+         this can then determine how they could be adjusted (up or down) to reduce amount of overall loss. 
+         The optimization technique can vary, but usually involves a gradient descent approach 
+         (each weight is inc or dec to minimize the loss).
+       - The changes to the weights are backpropagated to the layers in the network, replacing the previously used values.
+       - Process is repeated over multiple iterations (epochs) until loss is minimized & model predicts acceptably accurately.
+
+
+Note
+While it's easier to think of each case in the training data being passed through the network one at a time
+in reality the data is batched into matrices and processed using linear algebraic calculations.
+Therefore neural network training is best performed on CPU's with graphical processing units (GPUs) 
+optimized for vector and matrix manipulation
