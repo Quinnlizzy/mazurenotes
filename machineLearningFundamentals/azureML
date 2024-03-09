@@ -16,27 +16,22 @@ Features & capabilities of Azure ML
 -Integration with common ML frameworks such as MLflow; make it easier to manage model training/evaluation/deployment at scale.
 -Built-in support for visualizing & evaluating metrics for responsible AI, inc model explainability/fairness assessment & others.
 
-/////////////////////////////////
+
 Provisioning Azure ML resources
-The primary resource required for Azure ML is an Azure ML workspace, which you can provision in an Azure subscription. Other supporting resources, including storage accounts, container registries, virtual machines, and others are created automatically as needed.
+Primary resource required for Azure ML is an Azure ML workspace (Azure subscription).
+Supporting resources, inc. storage accounts/container registries/virtual machines are created automatically as needed.
+Create an Azure ML workspace, w/Azure portal
 
-To create an Azure ML workspace, you can use the Azure portal, as shown here:
-
-Screenshot of the Create Azure ML workspace page in the Azure portal.
 
 Azure ML studio
-After you've provisioned an Azure ML workspace, you can use it in Azure ML studio; a browser-based portal for managing your ML resources and jobs.
+After provision Azure ML workspace, use it in Azure ML studio (browser-based portal for managing your ML resources and jobs).
 
-In Azure ML studio, you can (among other things):
-
-Import and explore data.
-Create and use compute resources.
-Run code in notebooks.
-Use visual tools to create jobs and pipelines.
-Use automated ML to train models.
-View details of trained models, including evaluation metrics, responsible AI information, and training parameters.
-Deploy trained models for on-request and batch inferencing.
-Import and manage models from a comprehensive model catalog.
-Screenshot of Azure ML Studio.
-
-The screenshot shows the Metrics page for a trained model in Azure ML studio, in which you can see the evaluation metrics for a trained multiclass classification model.
+In Azure ML studio:
+        Import and explore data.
+        Create and use compute resources.
+        Run code in notebooks.
+        Use visual tools to create jobs and pipelines.
+        Use automated ML to train models.
+        View details of trained models, inc evaluation metrics/responsible AI info/training parameters.
+        Deploy trained models for on-request and batch inferencing.
+        Import and manage models from a comprehensive model catalog.
