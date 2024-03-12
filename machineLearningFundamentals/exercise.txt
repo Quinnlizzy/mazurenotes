@@ -19,7 +19,7 @@ Then use Azure Machine Learning studio to work with the resources in workspace.
                 Container registry: None (one created automatically first time you deploy model to container).
         
         Select Review + create, then select Create. 
-        Wait for your workspace to be created (it can take a few minutes), and then go to the deployed resource
+        Wait for workspace to be created and go to the deployed resource
 
 Select Launch studio (or open a new browser tab and navigate to https://ml.azure.com, and sign into Azure Machine Learning studio using your Microsoft account). Close any messages that are displayed.
 
