@@ -1,5 +1,8 @@
 Create an Azure Machine Learning workspace
-To use Azure Machine Learning, you need to provision an Azure Machine Learning workspace in your Azure subscription. Then you’ll be able to use Azure Machine Learning studio to work with the resources in your workspace.
+
+
+need to provision an Azure Machine Learning workspace w/ Azure subscription. 
+Then use Azure Machine Learning studio to work with the resources in workspace.
 
 Tip: If you already have an Azure Machine Learning workspace, you can use that and skip to the next task.
 
