@@ -35,3 +35,4 @@ In Azure ML studio:
         View details of trained models, inc evaluation metrics/responsible AI info/training parameters.
         Deploy trained models for on-request and batch inferencing.
         Import and manage models from a comprehensive model catalog.
+//
