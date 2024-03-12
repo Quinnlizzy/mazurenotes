@@ -10,8 +10,8 @@ Then use Azure Machine Learning studio to work with the resources in workspace.
         
         Settings:
                 Subscription: Mine.
-                Resource group: Create or select a resource group.
-                Name: Enter a unique name for your workspace.
+                Resource group: Create/select one.
+                Name: Enter unique name for workspace.
                 Region: Select the closest geographical region.
                 Storage account: Note the default new storage account that will be created for your workspace.
                 Key vault: Note the default new key vault that will be created for your workspace.
