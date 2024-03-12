@@ -16,8 +16,10 @@ Then use Azure Machine Learning studio to work with the resources in workspace.
                 Storage account: default new storage account created for your workspace.
                 Key vault: default new key vault created for your workspace.
                 Application insights: default new application insights resource created for your workspace.
-                Container registry: None (one will be created automatically the first time you deploy a model to a container).
-                Select Review + create, then select Create. Wait for your workspace to be created (it can take a few minutes), and then go to the deployed resource
+                Container registry: None (one created automatically first time you deploy model to container).
+        
+        Select Review + create, then select Create. 
+        Wait for your workspace to be created (it can take a few minutes), and then go to the deployed resource
 
 Select Launch studio (or open a new browser tab and navigate to https://ml.azure.com, and sign into Azure Machine Learning studio using your Microsoft account). Close any messages that are displayed.
 
