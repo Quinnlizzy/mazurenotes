@@ -21,6 +21,7 @@ Then use Azure Machine Learning studio to work with the resources in workspace.
         Select Review + create, then select Create. 
         Wait for workspace to be created and go to the deployed resource
 
-Select Launch studio (or open a new browser tab and navigate to https://ml.azure.com, and sign into Azure Machine Learning studio using your Microsoft account). Close any messages that are displayed.
-
-In Azure Machine Learning studio, you should see your newly created workspace. If not, select All workspaces in the left-hand menu and then select the workspace you just created..
+Select Launch studio 
+Close any messages displayed.
+AML studio, should see newly created workspace. 
+OR, select All workspaces in the left-hand menu and select one you created
