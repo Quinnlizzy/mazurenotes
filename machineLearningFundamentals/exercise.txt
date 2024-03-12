@@ -1,0 +1,17 @@
+Create an Azure Machine Learning workspace
+To use Azure Machine Learning, you need to provision an Azure Machine Learning workspace in your Azure subscription. Then you’ll be able to use Azure Machine Learning studio to work with the resources in your workspace.
+
+Tip: If you already have an Azure Machine Learning workspace, you can use that and skip to the next task.
+
+Sign into the Azure portal at https://portal.azure.com using your Microsoft credentials.
+
+Select + Create a resource, search for Machine Learning, and create a new Azure Machine Learning resource with the following settings:
+Subscription: Your Azure subscription.
+Resource group: Create or select a resource group.
+Name: Enter a unique name for your workspace.
+Region: Select the closest geographical region.
+Storage account: Note the default new storage account that will be created for your workspace.
+Key vault: Note the default new key vault that will be created for your workspace.
+Application insights: Note the default new application insights resource that will be created for your workspace.
+Container registry: None (one will be created automatically the first time you deploy a model to a container).
+Select Review + create, then select Create. Wait for your workspace to be created (it can take a few minutes), and then go to the deployed resource.
