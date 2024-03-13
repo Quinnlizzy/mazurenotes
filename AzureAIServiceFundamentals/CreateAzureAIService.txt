@@ -1,0 +1,26 @@
+Create Azure AI service resources
+
+Azure AI services are cloud-based - need to create a resource to use them.
+There are two types of AI service resources: 
+            multi-service 
+            single-service. 
+            
+development requirements and how want costs to be billed determine types of resources need.
+
+Multi-service resource: 
+        a resource created in the Azure portal - provides access to multiple Azure AI services with single key & endpoint.
+        Use resource Azure AI services when need several AI services/are exploring AI capabilities. 
+        When use an Azure AI services resource, all AI services are billed together.
+
+Single-service resources: 
+        resource created in Azure portal that provides access to single Azure AI service, 
+        such as Speech, Vision, Language, etc. 
+        Each Azure AI service has unique key &endpoint. 
+        These resources might be used when only require one AI service/want to see cost information separately.
+
+How to use the Azure portal to create an Azure AI services resource
+        sign in to Azure portal with Contributor access & select Create a resource.
+
+To create a multi-services resource search for Azure AI services in marketplace.
+To create a single-service resource, search for specific Azure AI service (Face/Language/Content Safety/etc)
+      
