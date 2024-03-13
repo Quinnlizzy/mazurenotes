@@ -109,10 +109,7 @@ Use automated machine learning to train a model
         Deploy status for the predict-rentals endpoint will be indicated in main part of page as Running.
         Wait for Deploy status to change to Succeeded.
 
-
-
-
-
+//////////////////////////////
 Best model summary
 Algorithm name
 VotingEnsemble
@@ -122,3 +119,61 @@ Ensemble details
 View ensemble details
 
 calm_root_n17wzg85
+///////////////////////////////
+
+
+Test the deployed service
+    AML studio, left hand menu, select Endpoints & open predict-rentals real-time endpoint.
+    On predict-rentals real-time endpoint page view Test tab.
+    Click the Test button.
+    Review test results, which include a predicted number of rentals based on the input features
+    The test pane took input data and used the model you trained to return the predicted number of rentals.
+    Review:
+         used a dataset of historical bicycle rental data to train a model.
+         model predicts the number of bicycle rentals expected on a given day based on seasonal and meteorological features.
+
+Code:
+        {
+        "Inputs": { 
+            "data": [
+            {
+                "day": 1,
+                "mnth": 1,   
+                "year": 2022,
+                "season": 2,
+                "holiday": 0,
+                "weekday": 1,
+                "workingday": 1,
+                "weathersit": 2, 
+                "temp": 0.3, 
+                "atemp": 0.3,
+                "hum": 0.3,
+                "windspeed": 0.3 
+            }
+            ]    
+        },   
+        "GlobalParameters": 1.0
+        }
+
+        Test result
+        
+        {1 item
+        "Results":[1 item
+        0:float298.00910497656025
+        ]
+        }
+
+Clean-up
+        The web service you created is hosted in an Azure Container Instance. 
+        If don’t intend to experiment with it further, should delete the endpoint to avoid accruing unnecessary Azure usage.
+            AML studio, on Endpoints tab, select predict-rentals endpoint. 
+            Then select Delete and confirm that you want to delete the endpoint.
+            Deleting your compute ensures your subscription won’t be charged for compute resources. 
+            You will be charged small amount for data storage as long as the AML workspace exists in your subscription.
+            If finished exploring AML, you can delete the AML workspace & associated resources.
+
+        To delete your workspace:
+
+            In Azure portal, in Resource groups page, 
+            open resource group you specified when creating Azure Machine Learning workspace.
+            Click Delete resource group, type resource group name to confirm you want to delete it, and select Delete.
