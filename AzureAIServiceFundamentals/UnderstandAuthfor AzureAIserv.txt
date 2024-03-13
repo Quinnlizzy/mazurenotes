@@ -1,0 +1,25 @@
+Understand authentication for Azure AI services
+
+ensure only those authorized have access to AI service through authentication, 
+process of verifying that user or service is who they say they are & are authorized to use service.
+
+Most Azure AI services accessed through RESTful APIs
+API defines what info is passed between two software components: 
+            the Azure AI service and whatever is using it. 
+Having defined interface is important: if AI service is updated, app must continue to work correctly.
+
+Part of API does is to handle auth
+Whenever a req is made to use AI services, that req must be auth
+Auth process uses an endpoint and resource key.
+
+endpoint describes how to reach AI service resource instance that want to use,
+(in a similar way to the way a URL identifies a web site). 
+
+When you view the endpoint for resource, it will look something like:
+https://myaiservices29.cognitiveservices.azure.com/
+
+resource key the privacy of your resource. To ensure always secure, key can be changed periodically. 
+Can view the endpoint and key in the Azure portal under Resource Management, Keys, Endpoint.
+
+When write code to access AI service, keys & endpoint must be included in auth header. 
+auth header sends an auth key to service to confirm that app can use resource. 
