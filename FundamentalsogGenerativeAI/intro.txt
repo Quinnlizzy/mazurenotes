@@ -1,0 +1,13 @@
+Fundamentals of Generative AI
+
+Azure OpenAI Service
+
+explore way in which large language models (LLMs) enable AI apps to generate original content based on natural language input. 
+Also learn how generative AI enables the creation of AI-powered copilots that can assist humans in creative tasks.
+
+Learning objectives
+
+Understand generative AI's place in the development of artificial intelligence
+Understand large language models and their role in intelligent applications
+Describe how Azure OpenAI supports intelligent application creation
+Describe examples of copilots and good prompts
