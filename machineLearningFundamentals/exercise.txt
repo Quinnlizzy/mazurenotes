@@ -25,3 +25,24 @@ Select Launch studio
 Close any messages displayed.
 AML studio, should see newly created workspace. 
 OR, select All workspaces in the left-hand menu and select one you created
+
+
+
+Use automated machine learning to train a model
+Automated machine learning enables you to try multiple algorithms and parameters to train multiple models, and identify the best one for your data. In this exercise, you’ll use a dataset of historical bicycle rental details to train a model that predicts the number of bicycle rentals that should be expected on a given day, based on seasonal and meteorological features.
+
+Citation: The data used in this exercise is derived from Capital Bikeshare and is used in accordance with the published data license agreement.
+
+In Azure Machine Learning studio, view the Automated ML page (under Authoring).
+
+Create a new Automated ML job with the following settings, using Next as required to progress through the user interface
+
+
+
+Best model summary
+Algorithm name
+VotingEnsemble
+Ensemble details
+
+
+View ensemble details
