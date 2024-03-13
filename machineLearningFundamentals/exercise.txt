@@ -1,8 +1,7 @@
 Create an Azure Machine Learning workspace
 
-
-need to provision an Azure Machine Learning workspace w/ Azure subscription. 
-Then use Azure Machine Learning studio to work with the resources in workspace.
+    need to provision an Azure Machine Learning workspace w/ Azure subscription. 
+    Then use Azure Machine Learning studio to work with the resources in workspace.
 
         Select + Create a resource, 
         search for Machine Learning,
@@ -21,21 +20,96 @@ Then use Azure Machine Learning studio to work with the resources in workspace.
         Select Review + create, then select Create. 
         Wait for workspace to be created and go to the deployed resource
 
-Select Launch studio 
-Close any messages displayed.
-AML studio, should see newly created workspace. 
-OR, select All workspaces in the left-hand menu and select one you created
-
+    Select Launch studio, Close any messages displayed.
+    AML studio, should see newly created workspace OR, select All workspaces in left-hand menu & select one created
 
 
 Use automated machine learning to train a model
-Automated machine learning enables you to try multiple algorithms and parameters to train multiple models, and identify the best one for your data. In this exercise, you’ll use a dataset of historical bicycle rental details to train a model that predicts the number of bicycle rentals that should be expected on a given day, based on seasonal and meteorological features.
+    enables you to try multiple algorithms & parameters to train multiple models & identify the best one for your data.
+    In exercise:
+        use dataset of historical bicycle rental details 
+        train model that predicts no. of rentals expected on given day based on seasonal and meteorological features.
 
-Citation: The data used in this exercise is derived from Capital Bikeshare and is used in accordance with the published data license agreement.
+    In Azure Machine Learning studio, view Automated ML page (under Authoring).
+    Create new Automated ML job with following settings:
+        Job name: mslearn-bike-automl
+        New experiment name: mslearn-bike-rental
+        Description: Automated machine learning for bike rental prediction
+        Tags: none
+        Task type & data:
 
-In Azure Machine Learning studio, view the Automated ML page (under Authoring).
+        Select task type: Regression
+        Select dataset: Create a new dataset with the following settings:
+        Data type:
+        Name: bike-rentals
+        Description: Historic bike rental data
+        Type: Tabular
+        Data source: Select From web files Web URL:
+        Web URL: https://aka.ms/bike-rentals
+        Skip data validation: do not select
+        Settings:
+        File format: Delimited
+        Delimiter: Comma
+        Encoding: UTF-8
+        Column headers: Only first file has headers
+        Skip rows: None
+        Dataset contains multi-line data: do not select
+        Schema:
+        Include all columns other than Path
+        Review the automatically detected types
+        Select Create. After the dataset is created, select the bike-rentals dataset to continue to submit the Automated ML job.
 
-Create a new Automated ML job with the following settings, using Next as required to progress through the user interface
+    Task settings:
+
+        Task type: Regression
+        Dataset: bike-rentals
+        Target column: Rentals (integer)
+        Additional configuration settings:
+        Primary metric: Normalized root mean squared error
+        Explain best model: Unselected
+        Use all supported models: Unselected. You’ll restrict the job to try only a few specific algorithms.
+        Allowed models: Select only RandomForest and LightGBM — normally you’d want to try as many as possible, but each model added increases the time it takes to run the job.
+        Limits: Expand this section
+        Max trials: 3
+        Max concurrent trials: 3
+        Max nodes: 3
+        Metric score threshold: 0.085 (so that if a model achieves a normalized root mean squared error metric score of 0.085 or less, the job ends.)
+        Timeout: 15
+        Iteration timeout: 15
+        Enable early termination: Selected
+        Validation and test:
+        Validation type: Train-validation split
+        Percentage of validation data: 10
+        Test dataset: None
+        Compute:
+        Select compute type: Serverless
+        Virtual machine type: CPU
+        Virtual machine tier: Dedicated
+        Virtual machine size: Standard_DS3_V2*
+        Number of instances: 1
+    
+    Submit training job; starts automatically & wait to finish
+
+    Review the best model
+        When the automated machine learning job has completed, you can review the best model it trained.
+        On Overview tab of AML job, note best model summary. 
+        Select text under Algorithm name for best model to view details.
+        Select Metrics tab and select residuals & predicted_true charts if they not already selected.
+        Review charts which show performance of model. 
+        Residuals chart shows residuals (differences between predicted & actual values) as a histogram. 
+        Predicted_true chart compares predicted values against true values.
+
+    Deploy and test the model
+        On Model tab for best model trained by AML job, select Deploy & use Web serv option to deploy model with following settings:
+            Name: predict-rentals
+            Description: Predict cycle rentals
+            Compute type: Azure Container Instance
+            Enable authentication: Selected
+        Wait for deployment to start - may take few seconds. 
+        Deploy status for the predict-rentals endpoint will be indicated in main part of page as Running.
+        Wait for Deploy status to change to Succeeded.
+
+
 
 
 
