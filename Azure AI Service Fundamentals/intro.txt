@@ -1,0 +1,26 @@
+Fundamentals of Azure AI services
+In this module, learn the fundamentals of how Azure AI services can be used to build applications.
+
+Learning objectives
+        Understand applications Azure AI services can be used to build
+        Understand how to access Azure AI services in the Azure portal
+        Understand how to use Azure AI services keys and endpoint for authentication
+        Create and use an Azure AI services resource in a Content Safety Studio setting
+
+AI is changing our world and industry
+better healthcare/online safety - AI is helping us to tackle some of society’s biggest issues.
+Azure AI services are a portfolio of AI capabilities that unlock automation for workloads 
+ - language
+   vision, 
+   intelligent search, 
+   content generation, and more. 
+
+Straightforward to implement & don’t require specialist AI knowledge.
+Organizations are using Azure AI services in innovative ways, 
+e.g. within robots to provide life-like companionship to older people 
+     by expressing happiness, concern, and even laughter. 
+     
+     In other use cases, AI to protect endangered species by identifying hard-to-find animals in images.
+     Previously time-consuming and error-prone work, 
+     But Azure AI Vision service can complete quickly and with high degree of accuracy, freeing scientists to do other work.
+
