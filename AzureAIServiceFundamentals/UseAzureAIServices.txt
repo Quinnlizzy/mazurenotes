@@ -1,0 +1,22 @@
+Once create Azure AI service resource:
+you can build apps using the REST API, software development kits (SDKs), visual studio interfaces.
+
+
+Using service studio interfaces
+        Studio interfaces provide friendly user interface to explore Azure AI services. 
+        Inc Vision Studio, Language Studio, Speech Studio, and the Content Safety Studio. 
+        Can test out Azure AI services using samples provided. 
+        Studio-based approach allows explore/demo/evaluate Azure AI services regardless of experience with AI/coding.
+
+Associate the AI service resource
+        Before can use AI service resource, must associate it with the studio want to use on Settings page. 
+        Select resource, then select Use Resource. 
+        then ready to explore Azure AI service within studio.
+
+E.g. Azure AI Content Safety service.
+        To explore what Content Safety service does, use the Content Safety Studio. 
+        First create either multi-service Azure AI services resource, or single-service Content Safety resource.
+        Then, on Content Safety Studio Settings page, select resource & select Use Resource. 
+        The AI service you created now assoc w/ the Content Safety Studio, & ready to be used.
+
+When developers incorporate an AI service into apps, they often use a SDK or the REST API.
