@@ -103,7 +103,7 @@ In other words, related words are grouped closer together.
     There are multiple ways can calculate appropriate embeddings for a given set of tokens, 
     including language modeling algorithms like Word2Vec or the encoder block in a transformer model.
 
-
+//
 
 Attention
 
