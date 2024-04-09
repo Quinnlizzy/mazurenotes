@@ -51,7 +51,7 @@ Basic principle is try to fit data to a function where values of the features(x)
 Result of algorithm = model that encapsulates the calculation derived by algorithm as a function - (f). 
 In efect: y = f(x)
 
-4)
+4
 With training phase complete, the trained model can now inferencing. 
 Model is software program that encapsulates the function produced by the training process. 
 You input set of feature values and receive as output a prediction of corresponding label.
