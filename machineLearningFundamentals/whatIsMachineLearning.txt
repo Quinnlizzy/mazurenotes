@@ -15,7 +15,7 @@ Machine learning as a function
  - After function is defined, you can use it to predict new values via inferencing.
 
 
-1) 
+1
 Training data consists of:
  - past obs that include attributes/features of the thing being observed.
  - the known value of the thing you want to train a model to predict (the label).
