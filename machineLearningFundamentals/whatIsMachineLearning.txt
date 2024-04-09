@@ -40,7 +40,7 @@ consider prev examples:
 
 
 
-2)
+2
 An algorithm is applied to the data to determine a relationship between features & label
 and generalize that relationship as a calculation that can be performed on 'x' to calculate 'y'.
 Algorithm depends on kind of predictive problem trying to solve
