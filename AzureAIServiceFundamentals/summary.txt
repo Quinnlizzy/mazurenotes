@@ -25,7 +25,9 @@ Machine learning
 ability for computer programs to learn from large amounts of data, in process known as "training".
 
 Multi-service resource
-AI service resource created in Azure portal that provides access to a bundle of AI services.
-Single-service resource – a resource created in the Azure portal that provides access to a single Azure AI service, such as Speech, Vision, Language, etc. Each Azure AI service has a unique key and endpoint.
+AI service resource created in Azure portal that provides access to bundle of AI services.
+
+Single-service resource
+resource created in the Azure portal that provides access to a single Azure AI service, such as Speech, Vision, Language, etc. Each Azure AI service has a unique key and endpoint.
 RESTful API – a scalable web application programming interface used to access Azure AI services.
 You can find out more about Azure AI services in the service documentation.
