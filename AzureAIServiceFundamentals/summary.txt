@@ -4,7 +4,8 @@ In this module we’ve used several different terms relating to AI services.
 
 Here's a recap:
 
-API – application programming interfaces (APIs) enable software components to communicate, so one side can be updated without stopping the other from working.
+API – application programming interfaces (APIs) enable software components to communicate, 
+so one side can be updated without stopping other from working.
 Artificial Intelligence (AI) – computer programs that respond in ways that are normally associated with human reasoning, learning, and thought.
 Azure AI services – a portfolio of AI services that can be incorporated into applications quickly and easily without specialist knowledge. Azure AI services is also the name for the multi-service resource created in the Azure portal that provides access to several different Azure AI services with a single key and endpoint.
 Endpoint – the location of a resource, such as an Azure AI service.
