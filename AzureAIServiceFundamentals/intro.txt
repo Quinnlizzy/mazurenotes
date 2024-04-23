@@ -7,7 +7,7 @@ Learning objectives
         Understand how to use Azure AI services keys and endpoint for authentication
         Create and use an Azure AI services resource in a Content Safety Studio setting
 
-AI is changing our world and industry
+AI changing world and safety
 better healthcare/online safety - AI is helping us to tackle some of society’s biggest issues.
 Azure AI services are a portfolio of AI capabilities that unlock automation for workloads 
  - language

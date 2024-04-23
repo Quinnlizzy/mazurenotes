@@ -55,4 +55,4 @@ In efect: y = f(x)
 With training phase complete, the trained model can now inferencing. 
 Model is software program that encapsulates the function produced by the training process. 
 You input set of feature values and receive as output a prediction of corresponding label.
- Because output = a prediction, NOT an observed value, output is shown as ŷ (verbalized "y-hat").
+Because output = a prediction, NOT an observed value, output is shown as ŷ (verbalized "y-hat").
