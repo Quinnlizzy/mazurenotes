@@ -30,5 +30,7 @@ AI service resource created in Azure portal that provides access to bundle of AI
 Single-service resource
 resource created in the Azure portal that provides access to single Azure AI service
 such as Speech, Vision, Language, etc. Each Azure AI service has unique key and endpoint.
-RESTful API – a scalable web application programming interface used to access Azure AI services.
+
+RESTful API
+scalable web application programming interface used to access Azure AI services.
 You can find out more about Azure AI services in the service documentation.
